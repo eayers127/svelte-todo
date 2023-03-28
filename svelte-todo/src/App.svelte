@@ -1,5 +1,9 @@
 <script>
-  let todos = [];
+  let todos = [
+    { id: 1, title: 'Walk the Dog', completed: false },
+    { id: 2, title: 'Clean Room', completed: false },
+    { id: 3, title: 'Homework', completed: false}
+  ];
   let newTodo = "";
   let editTodo = null;
 
@@ -33,7 +37,7 @@
 </script>
 
 <main>
-  <h1>To-Do List</h1>
+  <h1>Svelte To Do</h1>
 
   <form on:submit|preventDefault={addTodo}>
     <input type="text" bind:value={newTodo} placeholder="Add a new todo" />
